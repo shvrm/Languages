@@ -37,7 +37,7 @@ map.on('style.load', function () {
         },
         "paint": {
         	
-        	"fill-color": "blue"
+        	// "fill-color": black
         }
     });
 
@@ -126,6 +126,7 @@ map.on('click', function (e) {
  var filter = ['in', 'ISO3'].concat(countryFilter); //construct the filter here
  console.log(filter);
  console.log(map.setFilter('countriesLayer',filter)); //set the filter for the countries
+ map.setPaintProperty('countriesLayer','fill-color','#7AC4B8')
  console.log(map.getFilter('countriesLayer')); 
 				}
 
