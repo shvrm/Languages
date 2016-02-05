@@ -88,15 +88,10 @@ map.on('click', function (e) {
             if (features.length > 0) {
                 if (features[0].properties.language) {
                     // Loops through languages at the office
-                    for (var i = 0; i <  features[0].properties.language.length ; i++) {
-                        console.log(features[0].properties.language.length);
-                        console.log(countryLanguageJSON.features.length);
-
-                                    //loop through country list
+                    for (var i = 0; i <  features[0].properties.language.length; i++) {
+                        //loop through country list
                         for (var j = 0; j < countryLanguageJSON.features.length; j++) {
                             var countryLanguages; //variable for languages of a country
-                            console.log(countryLanguageJSON.features[j].properties.NAME);
-
                             if (countryLanguageJSON.features[j].properties.LANGUAGE) {
                                 //if language is not null
                                 //split the multiple languages
@@ -106,7 +101,6 @@ map.on('click', function (e) {
                             if (countryLanguages) {
                                 //for each language in the country list iterate
                                 for (var k = 0; k < countryLanguages.length; k++) {
-                                    console.log(features[0].properties.language[i]);
                                     if (features[0].properties.language[i] === countryLanguages[k]) {
                                         countryFilter.push(countryLanguageJSON.features[j].properties.ISO3);
                                     }
@@ -115,17 +109,11 @@ map.on('click', function (e) {
                         }
                     }
                 }
-                console.log(JSON.stringify(countryFilter));
-
-
                 var filter = ['in', 'ISO3'].concat(countryFilter); //construct the filter here
-                console.log(filter);
-                console.log(map.setFilter('countriesLayer', filter)); //set the filter for the countries
+                map.setFilter('countriesLayer', filter); //set the filter for the countries
                 map.setPaintProperty('countriesLayer', 'fill-color', '#7AC4B8');
-                console.log(map.getFilter('countriesLayer'));
+                map.getFilter('countriesLayer');
             }
 
         });
-
 });
-
