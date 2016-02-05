@@ -1,0 +1,22 @@
+{
+  "name": "Languages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shvrm/Languages.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shvrm/Languages/issues"
+  },
+  "homepage": "https://github.com/shvrm/Languages",
+  "dependencies": {
+    "watchify": "^3.7.0"
+  }
+}

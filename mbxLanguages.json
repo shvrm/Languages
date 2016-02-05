@@ -1,0 +1,219 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "language": [
+          "SPN",
+          "GRC",
+          "GER",
+          "ITA",
+          "CAN",
+          "CHN"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4135223031044,
+          37.77573520373188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "language": [
+          "FRA",
+          "SPN",
+          "POR",
+          "CHN",
+          "ARA",
+          "GER",
+          "RUS",
+          "CAN",
+          "DUT"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.032530605793,
+          38.91318794578371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "language": [
+          "SPN"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.21789824962616,
+          -13.155898746994458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "language": [
+          "TAM"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.63682425022125,
+          12.981067249434366
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "language": [
+          "GER",
+          "FRA"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.419732749462128,
+          52.50038708206194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "language": [
+          "FRA",
+          "JAP",
+          "SPN"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6513671875,
+          45.508271755944975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "language": ["LAT"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.287109375,
+          49.468124067331644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "language": [
+          "RUS"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.4797210693359375,
+          51.87278163500137
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "language": [
+          "RUS",
+          "UKR"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.531005859375,
+          50.4478856743724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "language": [
+          "FRA"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.03753662109375,
+          40.5534610833091
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "language": [
+          "DUT",
+          "FRA"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.559326171875,
+          50.79551936692376
+        ]
+      }
+    }
+  ]
+}
