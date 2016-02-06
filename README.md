@@ -1,4 +1,4 @@
 # development
 * `npm install`
-* `watchify language.js -o build.js`
+* `watchify language.js -o build.js -v`
 * `serve`
