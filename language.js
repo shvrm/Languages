@@ -86,34 +86,53 @@ map.on('click', function (e) {
             if (err) throw err;
 
             if (features.length > 0) {
-                if (features[0].properties.language) {
-                    // Loops through languages at the office
+                if (features[0].properties.language) { // if there is a language attribute for each office
+                    // Loop through the language list of each office
                     for (var i = 0; i <  features[0].properties.language.length; i++) {
+                    	// console.log("Verifying matches for "+features[0].properties.language[i]+"...");
                         //loop through country list
                         for (var j = 0; j < countryLanguageJSON.features.length; j++) {
-                            var countryLanguages; //variable for languages of a country
-                            if (countryLanguageJSON.features[j].properties.LANGUAGE) {
-                                //if language is not null
+                        	// console.log("Entering through the country list...");
+                            var countryLanguages =[]; //variable for languages of a country
+                            if (countryLanguageJSON.features[j].properties.LANGUAGE) { //if language is not null
+                                
                                 //split the multiple languages
                                 countryLanguages = countryLanguageJSON.features[j].properties.LANGUAGE.split(',');
+
                             }
 
                             if (countryLanguages) {
-                                //for each language in the country list iterate
+                            	// console.log("List of languages for "+countryLanguageJSON.features[j].properties.NAME + " "+countryLanguages);
+
+                            	 //for each language in the country list iterate
                                 for (var k = 0; k < countryLanguages.length; k++) {
-                                    if (features[0].properties.language[i] === countryLanguages[k]) {
+                                	// console.log("Testing whether "+ countryLanguages[k] + " is a match for " +features[0].properties.language[i] );
+                                    if (features[0].properties.language[i] === countryLanguages[k].trim()) {
+                                    	// console.log("Yes, found a match!");
                                         countryFilter.push(countryLanguageJSON.features[j].properties.ISO3);
                                     }
                                 }
                             }
+                            
                         }
                     }
                 }
+                console.log("A total of "+countryFilter.length+" matches found.");
                 var filter = ['in', 'ISO3'].concat(countryFilter); //construct the filter here
                 map.setFilter('countriesLayer', filter); //set the filter for the countries
-                map.setPaintProperty('countriesLayer', 'fill-color', '#7AC4B8');
-                map.getFilter('countriesLayer');
+                map.setPaintProperty('countriesLayer','fill-color','#7AC4B8');
+ 				map.setPaintProperty('countriesLayer','fill-opacity','0.5');
+ 				map.setPaintProperty('countriesLayer','fill-outline-color','#ffffff');
+
+                
             }
 
         });
 });
+
+
+
+
+
+
+
