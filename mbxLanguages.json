@@ -31,7 +31,7 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "language": [
-          "FRA",
+          "FRN",
           "SPN",
           "POR",
           "CHN",
@@ -94,7 +94,7 @@
         "marker-symbol": "",
         "language": [
           "GER",
-          "FRA"
+          "FRN"
         ]
       },
       "geometry": {
@@ -112,7 +112,7 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "language": [
-          "FRA",
+          "FRN",
           "JAP",
           "SPN"
         ]
@@ -131,7 +131,9 @@
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
-        "language": ["LAT"]
+        "language": [
+          "LAT"
+        ]
       },
       "geometry": {
         "type": "Point",
@@ -185,7 +187,7 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "language": [
-          "FRA"
+          "FRN"
         ]
       },
       "geometry": {
@@ -204,7 +206,7 @@
         "marker-symbol": "",
         "language": [
           "DUT",
-          "FRA"
+          "FRN"
         ]
       },
       "geometry": {
