@@ -4,6 +4,7 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Mapbox, San Francisco",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
@@ -27,6 +28,7 @@
     {
       "type": "Feature",
       "properties": {
+        "name":"Mapbox, DC",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
@@ -53,6 +55,7 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Mapbox, Peru",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
@@ -71,6 +74,7 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Mapbox, Bengaluru",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
@@ -89,6 +93,7 @@
     {
       "type": "Feature",
       "properties": {
+        "name":"Mapbox, Berlin",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
@@ -108,6 +113,7 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Mapbox, Portland",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
@@ -128,6 +134,7 @@
     {
       "type": "Feature",
       "properties": {
+        "name":"Mapbox, Canada",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
@@ -146,6 +153,7 @@
     {
       "type": "Feature",
       "properties": {
+        "name":"Mapbox, London",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
@@ -164,6 +172,7 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Mapbox, Kiev",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
@@ -183,6 +192,7 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Mapbox, Colorado",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
@@ -201,6 +211,7 @@
     {
       "type": "Feature",
       "properties": {
+        "name":"Mapbox, Belgium",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
