@@ -37,9 +37,9 @@ map.on('style.load', function () {
             visibility: 'visible'
         },
         'paint': {
-			fill-color: 'pink'
-			fill-opacity: '.6'
-			fill-outline-color: 'blue'
+			'fill-color': '#ffffff',
+			'fill-opacity': '.0',
+			'fill-outline-color': '#ffffff'
         }
     });
 
@@ -55,8 +55,8 @@ map.on('style.load', function () {
         },
         'paint': {
             'circle-radius': 12,
-            'circle-color': 'red',
-            'circle-blur' : 0.5
+            'circle-color': '#fcc992',
+            'circle-blur' : .8
         }
     });
 
@@ -71,8 +71,8 @@ map.on('style.load', function () {
             visibility: 'visible'
         },
         'paint': {
-            'circle-radius': 8,
-            'circle-color': 'white',
+            'circle-radius': 5,
+            'circle-color': '#0bba02',
             'circle-opacity': 0.9
 
         }
@@ -125,10 +125,9 @@ map.on('click', function (e) {
                 console.log("A total of "+countryFilter.length+" matches found.");
                 var filter = ['in', 'ISO3'].concat(countryFilter); //construct the filter here
                 map.setFilter('countriesLayer', filter); //set the filter for the countries
-                map.setPaintProperty('countriesLayer','fill-color','#7AC4B8');
- 				map.setPaintProperty('countriesLayer','fill-opacity','0.5');
- 				map.setPaintProperty('countriesLayer','fill-outline-color','#ffffff');
-
+                map.setPaintProperty('countriesLayer','fill-color','#fac7e9');
+ 				map.setPaintProperty('countriesLayer','fill-opacity','0.8');
+ 				map.setPaintProperty('countriesLayer','fill-outline-color','#5fe1f5');
                 
             }
 
@@ -181,9 +180,9 @@ map.on('mousemove', function (e) {
                 console.log("A total of "+countryFilter.length+" matches found.");
                 var filter = ['in', 'ISO3'].concat(countryFilter); //construct the filter here
                 map.setFilter('countriesLayer', filter); //set the filter for the countries
-                map.setPaintProperty('countriesLayer','fill-color','#7AC4B8');
-                map.setPaintProperty('countriesLayer','fill-opacity','0.5');
-                map.setPaintProperty('countriesLayer','fill-outline-color','#ffffff');
+                map.setPaintProperty('countriesLayer','fill-color','#fcc992');
+                map.setPaintProperty('countriesLayer','fill-opacity','0.8');
+                map.setPaintProperty('countriesLayer','fill-outline-color','#fefaff');
 
                 
             }
@@ -245,18 +244,3 @@ map.on('mousemove', function(e) {
             .addTo(map);
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
