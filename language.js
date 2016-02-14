@@ -37,7 +37,9 @@ map.on('style.load', function () {
             visibility: 'visible'
         },
         'paint': {
-            // 'fill-color': black
+			fill-color: 'pink'
+			fill-opacity: '.6'
+			fill-outline-color: 'blue'
         }
     });
 
