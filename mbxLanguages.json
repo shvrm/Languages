@@ -24,7 +24,6 @@
           "CHN",
           "FRN",
           "JPN",
-          "ITA",
           "VIT",
           "GHA",
           "TWI"
@@ -138,6 +137,13 @@
       "type": "Feature",
       "properties": {
         "name":"Mapbox, Berlin",
+        "housenumber":"8",
+        "street": "Adalbertstraße",
+        "area": " Kreuzberg",
+        "city": "Berlin",
+        // "state": "",
+        "postcode": "10999",
+        "country":"Germany",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
