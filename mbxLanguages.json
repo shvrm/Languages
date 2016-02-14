@@ -15,12 +15,12 @@
           "ITA",
           "CAN",
           "CHN",
-		  "FRN",
-		  "JPN",
-		  "ITA",
-		  "VIT",
-		  "GHA",
-		  "TWI"
+          "FRN",
+          "JPN",
+          "ITA",
+          "VIT",
+          "GHA",
+          "TWI"
         ]
       },
       "geometry": {
@@ -40,18 +40,18 @@
         "marker-symbol": "",
         "language": [
           "FRN",
-		  "ARA",
-          "SPN",
+          "ARA",
+		      "SPN",
           "POR",
           "CHN",
           "GER",
           "RUS",
           "CAN",
           "DUT",
-		  "LAT",
-		  "HIN",
-		  "UKR",
-		  "MAN"
+          "LAT",
+          "HIN",
+          "UKR",
+          "MAN"
         ]
       },
       "geometry": {
@@ -90,12 +90,12 @@
         "marker-symbol": "",
         "language": [
           "TAM",
-		  "HIN",
-		  "MAL",
-		  "GUJ",
-		  "BEN",
-		  "FLP",
-		  "SPN"
+          "HIN",
+          "MAL",
+          "GUJ",
+          "BEN",
+          "FLP",
+          "SPN"
         ]
       },
       "geometry": {

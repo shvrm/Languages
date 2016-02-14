@@ -1,5 +1,5 @@
 'use strict';
-var countryLanguageJSON = require('./Language.json');
+var countryLanguageJSON = require('./countryLanguages.json');
 var offices = require('./mbxLanguages.json');
 
 
