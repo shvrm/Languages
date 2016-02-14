@@ -55,7 +55,7 @@ map.on('style.load', function () {
         },
         'paint': {
             'circle-radius': 14,
-            'circle-color': '#d06f5a',
+            'circle-color': '#e62749',
             'circle-blur' : .9
         }
     });
@@ -72,7 +72,7 @@ map.on('style.load', function () {
         },
         'paint': {
             'circle-radius': 5,
-            'circle-color': '#c8543b',
+            'circle-color': '#e62749',
             'circle-opacity': 0.9
 
         }
@@ -180,8 +180,8 @@ map.on('mousemove', function (e) {
                 console.log("A total of "+countryFilter.length+" matches found.");
                 var filter = ['in', 'ISO3'].concat(countryFilter); //construct the filter here
                 map.setFilter('countriesLayer', filter); //set the filter for the countries
-                map.setPaintProperty('countriesLayer','fill-color','#bb4c35');
-                map.setPaintProperty('countriesLayer','fill-opacity','0.8');
+                map.setPaintProperty('countriesLayer','fill-color','#f2e190');
+                map.setPaintProperty('countriesLayer','fill-opacity','1');
                 map.setPaintProperty('countriesLayer','fill-outline-color','#fefaff');
 
                 
