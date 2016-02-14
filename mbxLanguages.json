@@ -5,6 +5,13 @@
       "type": "Feature",
       "properties": {
         "name": "Mapbox, San Francisco",
+        "housenumber":"149",
+        "street": "9th Street",
+        "area": "West SoMa",
+        "city": "San Francisco", 
+        "state":"California",
+        "postcode": "94103",
+        "country": "United States of America",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
@@ -14,7 +21,12 @@
           "GER",
           "ITA",
           "CAN",
-          "CHN"
+          "CHN",
+          "FRN",
+          "JPN",
+          "VIT",
+          "GHA",
+          "TWI"
         ]
       },
       "geometry": {
@@ -29,19 +41,30 @@
       "type": "Feature",
       "properties": {
         "name":"Mapbox, DC",
+        "housenumber":"1714 Rear",
+        "street": "14th Street Northwest", 
+        "area": "Logan Circle/Shaw, Logan Circle",
+        "city": "Washington",
+        "state":"District of Columbia",
+        "postcode": "20009",
+        "country": "United States of America",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "language": [
           "FRN",
-          "SPN",
+          "ARA",
+		      "SPN",
           "POR",
           "CHN",
-          "ARA",
           "GER",
           "RUS",
           "CAN",
-          "DUT"
+          "DUT",
+          "LAT",
+          "HIN",
+          "UKR",
+          "MAN"
         ]
       },
       "geometry": {
@@ -56,6 +79,13 @@
       "type": "Feature",
       "properties": {
         "name": "Mapbox, Peru",
+        "housenumber": "Jirón Jose Santos Chocano",
+        "street": "Panpa del Arco I",
+        "area" :"Distrito de Jesús Nazareno", 
+        "city":"Huamanga",
+        "state": "Ayacucho",
+        "postcode": "05011",
+        "country": "Peru",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
@@ -75,11 +105,24 @@
       "type": "Feature",
       "properties": {
         "name": "Mapbox, Bengaluru",
+        "housenumber":"No 221",
+        "street": "13th Cross Road",
+        "area": "2nd Main Indiranagar",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "postcode": "560038",
+        "country":"India",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
         "language": [
-          "TAM"
+          "TAM",
+          "HIN",
+          "MAL",
+          "GUJ",
+          "BEN",
+          "FLP",
+          "SPN"
         ]
       },
       "geometry": {
@@ -94,6 +137,13 @@
       "type": "Feature",
       "properties": {
         "name":"Mapbox, Berlin",
+        "housenumber":"8",
+        "street": "Adalbertstraße",
+        "area": " Kreuzberg",
+        "city": "Berlin",
+        // "state": "",
+        "postcode": "10999",
+        "country":"Germany",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
@@ -107,124 +157,6 @@
         "coordinates": [
           13.419732749462128,
           52.50038708206194
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Mapbox, Portland",
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "language": [
-          "FRN",
-          "JAP",
-          "SPN"
-        ]
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.6513671875,
-          45.508271755944975
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name":"Mapbox, Canada",
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "language": [
-          "LAT"
-        ]
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -84.287109375,
-          49.468124067331644
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name":"Mapbox, London",
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "language": [
-          "RUS"
-        ]
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4797210693359375,
-          51.87278163500137
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Mapbox, Kiev",
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "language": [
-          "RUS",
-          "UKR"
-        ]
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          30.531005859375,
-          50.4478856743724
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Mapbox, Colorado",
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "language": [
-          "FRN"
-        ]
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -105.03753662109375,
-          40.5534610833091
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name":"Mapbox, Belgium",
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "language": [
-          "DUT",
-          "FRN"
-        ]
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          4.559326171875,
-          50.79551936692376
         ]
       }
     }

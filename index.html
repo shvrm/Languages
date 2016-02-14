@@ -9,11 +9,54 @@
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
+        aside {
+		    font:15px Arial;
+		    color:#ccc;
+		    width:300px;
+		    background:#000;
+		    height:325px;
+		}
+		.left {
+			
+		    float:left;
+		   
+		    
+		}
+		.right {
+		    float:right;
+		}
+		#infoTab {
+	    position:absolute;
+	    
+	    left:1%;
+	    bottom:1%;
+	    
+	    cursor:pointer;
+	    background: none transparent;
+	    /*background-color: rgba(0,0,0,0.5)*/
+	   
+ 
+		}
+
     </style>
 </head>
 <body>
 
 <div id='map'></div>
+<aside id="infoTab" class="left" >
+<div id="info" class="info" class="left" style="display:none;">
+
+ 
+ 
+
+  <br/>
+		  <div class="pad1y">
+         <a href="https://www.mapbox.com/jobs/map-analyst-blr/">We're hiring! </a>
+         Check for updates on our <a href="https://www.facebook.com/Mapboxblr/?fref=ts">Facebook page</a> and our <a href="https://twitter.com/mapbox">Twitter</a> handle.
+     </div>
+     </div>
+
+</aside>
 <script src="build.js">
 </script>
 
