@@ -14,7 +14,13 @@
           "GER",
           "ITA",
           "CAN",
-          "CHN"
+          "CHN",
+      "FRN",
+      "JPN",
+      "ITA",
+      "VIT",
+      "GHA",
+      "TWI"
         ]
       },
       "geometry": {
@@ -34,14 +40,18 @@
         "marker-symbol": "",
         "language": [
           "FRN",
+      "ARA",
           "SPN",
           "POR",
           "CHN",
-          "ARA",
           "GER",
           "RUS",
           "CAN",
-          "DUT"
+          "DUT",
+      "LAT",
+      "HIN",
+      "UKR",
+      "MAN"
         ]
       },
       "geometry": {
@@ -79,7 +89,13 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "language": [
-          "TAM"
+          "TAM",
+      "HIN",
+      "MAL",
+      "GUJ",
+      "BEN",
+      "FLP",
+      "SPN"
         ]
       },
       "geometry": {
@@ -107,124 +123,6 @@
         "coordinates": [
           13.419732749462128,
           52.50038708206194
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Mapbox, Portland",
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "language": [
-          "FRN",
-          "JAP",
-          "SPN"
-        ]
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.6513671875,
-          45.508271755944975
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name":"Mapbox, Canada",
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "language": [
-          "LAT"
-        ]
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -84.287109375,
-          49.468124067331644
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name":"Mapbox, London",
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "language": [
-          "RUS"
-        ]
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.4797210693359375,
-          51.87278163500137
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Mapbox, Kiev",
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "language": [
-          "RUS",
-          "UKR"
-        ]
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          30.531005859375,
-          50.4478856743724
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Mapbox, Colorado",
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "language": [
-          "FRN"
-        ]
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -105.03753662109375,
-          40.5534610833091
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name":"Mapbox, Belgium",
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "language": [
-          "DUT",
-          "FRN"
-        ]
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          4.559326171875,
-          50.79551936692376
         ]
       }
     }
