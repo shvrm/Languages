@@ -167,9 +167,18 @@ map.on('mousemove', function (e) {
                                  //for each language in the country list iterate
                                 for (var k = 0; k < countryLanguages.length; k++) {
                                     // console.log("Testing whether "+ countryLanguages[k] + " is a match for " +features[0].properties.language[i] );
+
                                     if (features[0].properties.language[i] === countryLanguages[k].trim()) {
                                         // console.log("Yes, found a match!");
-                                        countryFilter.push(countryLanguageJSON.features[j].properties.ISO3);
+                                        if(countryFilter.indexOf(countryLanguageJSON.features[j].properties.ISO3) < 0 )
+                                        {
+
+                                            countryFilter.push(countryLanguageJSON.features[j].properties.ISO3);
+
+
+                                        }
+                                        
+                                        
                                     }
                                 }
                             }
@@ -177,17 +186,20 @@ map.on('mousemove', function (e) {
                         }
                     }
                 }
-                console.log("A total of "+countryFilter.length+" matches found.");
+                
                 var filter = ['in', 'ISO3'].concat(countryFilter); //construct the filter here
                 map.setFilter('countriesLayer', filter); //set the filter for the countries
                 map.setPaintProperty('countriesLayer','fill-color','#f2e190');
                 map.setPaintProperty('countriesLayer','fill-opacity','1');
                 map.setPaintProperty('countriesLayer','fill-outline-color','#fefaff');
-
                 
+
+                console.log("A total of "+countryFilter.length+" matches found for " + features[0].properties.name);
             }
 
+
         });
+
 });
 
 
@@ -236,11 +248,20 @@ map.on('mousemove', function(e) {
             popup.remove();
             return;
         }
+        var popupHTML = '<h5>' +  features[0].properties.name +'</h5>' + 
+                        '<p>' + features[0].properties.housenumber+", "+
+                        features[0].properties.street+"</br>"+
+                        features[0].properties.area+"</br>"+
+                        features[0].properties.city+" "+
+                        features[0].properties.postcode+"</br>"+
+                        features[0].properties.state+"</br>"+
+                        features[0].properties.country+
+                        "</p>";
         var feature = features[0];
         // Initialize a popup and set its coordinates
         // based on the feature found.
         popup.setLngLat(feature.geometry.coordinates)
-            .setHTML(feature.properties.name)
+            .setHTML(popupHTML)
             .addTo(map);
     });
 });
