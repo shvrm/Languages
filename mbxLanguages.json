@@ -15,12 +15,21 @@
           "ITA",
           "CAN",
           "CHN",
+<<<<<<< HEAD
       "FRN",
       "JPN",
       "ITA",
       "VIT",
       "GHA",
       "TWI"
+=======
+		  "FRN",
+		  "JPN",
+		  "ITA",
+		  "VIT",
+		  "GHA",
+		  "TWI"
+>>>>>>> origin/gh-pages
         ]
       },
       "geometry": {
@@ -40,7 +49,11 @@
         "marker-symbol": "",
         "language": [
           "FRN",
+<<<<<<< HEAD
       "ARA",
+=======
+		  "ARA",
+>>>>>>> origin/gh-pages
           "SPN",
           "POR",
           "CHN",
@@ -48,10 +61,17 @@
           "RUS",
           "CAN",
           "DUT",
+<<<<<<< HEAD
       "LAT",
       "HIN",
       "UKR",
       "MAN"
+=======
+		  "LAT",
+		  "HIN",
+		  "UKR",
+		  "MAN"
+>>>>>>> origin/gh-pages
         ]
       },
       "geometry": {
@@ -90,12 +110,21 @@
         "marker-symbol": "",
         "language": [
           "TAM",
+<<<<<<< HEAD
       "HIN",
       "MAL",
       "GUJ",
       "BEN",
       "FLP",
       "SPN"
+=======
+		  "HIN",
+		  "MAL",
+		  "GUJ",
+		  "BEN",
+		  "FLP",
+		  "SPN"
+>>>>>>> origin/gh-pages
         ]
       },
       "geometry": {
