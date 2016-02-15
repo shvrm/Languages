@@ -17,7 +17,7 @@ var map = new mapboxgl.Map({
 });
 
 
-//diable paning and other interactions
+//disable paning and other interactions
 
 map.dragRotate.disable();
 map.touchZoomRotate.disable();
@@ -95,8 +95,6 @@ map.on('style.load', function () {
 
 
 map.on('mousemove', function (e) {
-    
-
     var countryFilter = []; //matching countries
 
     map.featuresAt(e.point, {
@@ -152,12 +150,7 @@ map.on('mousemove', function (e) {
                 map.setFilter('countriesLayer', filter); //set the filter for the countries
                 onHover();
                
-                
-
-            
-        
-               
-            }
+             }
                 var generalInfoDiv = document.getElementById("generalInfo");
                 var officeInfodiv= document.getElementById("officeInfo");
                 map.getCanvas().style.cursor = (!err && features.length) ? 'pointer' : '';
