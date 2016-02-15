@@ -11,14 +11,14 @@ var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/ramas/cikmcynsj00c5b5lwqzvvlk1r', //stylesheet location
     center: [27.33, 27.73], // starting position
-    zoom: 1.8 // starting zoom
+    minZoom: 1.8,
+    maxZoom: 1.8 // starting zoom
     // hash: true
 });
 
 map.dragRotate.disable();
 map.touchZoomRotate.disable();
 map.touchZoomRotate.disableRotation();
-
 
 
 var countries = new mapboxgl.GeoJSONSource({
