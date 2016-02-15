@@ -19,7 +19,7 @@ var map = new mapboxgl.Map({
 map.dragRotate.disable();
 map.touchZoomRotate.disable();
 map.touchZoomRotate.disableRotation();
-
+map.dragPan.disable();
 
 var countries = new mapboxgl.GeoJSONSource({
     'type': 'geojson',
