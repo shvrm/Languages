@@ -1,0 +1,37 @@
+ body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+.info {
+		 font:15px Arial;
+		 color:#ccc;
+		 width:300px;
+		 background:#000;
+		 height:325px;
+}
+.left {
+			
+		    float:left;
+		   
+		    
+}
+.right {
+		    float:right;
+}
+			
+#officeInfo {
+	    position:absolute;
+	    left:1%;
+	    bottom:1%;
+	    cursor:pointer;
+	    background: none transparent;
+	  /*background-color: rgba(255,255,255,1) */
+}
+#generalInfo {
+	    position:absolute;
+	    left:1%;
+	    bottom:1%;
+	    cursor:pointer;
+	    background: none transparent;
+	    /*background-color: rgba(255,255,255,1)*/
+	   
+ 
+}

@@ -6,75 +6,28 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-        aside {
-		    font:15px Arial;
-		    color:#ccc;
-		    width:300px;
-		    background:#000;
-		    height:325px;
-		}
-		.left {
-			
-		    float:left;
-		   
-		    
-		}
-		.right {
-		    float:right;
-		}
-		#infoTab {
-	    position:absolute;
-	    
-	    left:1%;
-	    bottom:1%;
-	    
-	    cursor:pointer;
-	    background: none transparent;
-	    /*background-color: rgba(0,0,0,0.5)*/
-	   
- 
-		}
-		#infoTab1 {
-	    position:absolute;
-	    
-	    left:1%;
-	    bottom:1%;
-	    
-	    cursor:pointer;
-	    background: none transparent;
-	    /*background-color: rgba(0,0,0,0.5)*/
-	   
- 
-		}
+    <link href='css/style.css' rel='stylesheet' />
 
-    </style>
+    
 </head>
 <body>
 
 <div id='map'></div>
-<aside id="infoTab" class="left" >
-<div id="info" class="info" class="left" style="display:block;">
+
+<div id="officeInfo" class="info" class="left" style="display:block;">
+
+</div>
 
 
-
-		 
-     </div>
-
-</aside>
-<aside id="infoTab1" class="left" >
-<div id="info1" class="info" class="left" style="display:block;">
+<div id="generalInfo" class="info" class="left" style="display:block;">
 
 <h1>Mapbox's language reach</h1>
 <p>Last week we did a quick poll of all the languages spoken by our team across offices. In total we speak 24 languages that are official/co-official to 110 countries. Hover over our office locations to find out the global reach of our team based on our language repotoire.</p>
 <p>Later this month we'll be opening up our fifth, and newest office in Berlin, Germany. This brings our team size to a total of xxx individuals.</p>
 
 		 
-     </div>
+</div>
 
-</aside>
 <script src="build.js">
 </script>
 

@@ -1,9 +1,9 @@
 'use strict';
 var countryLanguageJSON = require('./countryLanguages.json');
 var offices = require('./mbxLanguages.json');
-var blurbHeader = "Placeholder";
-var blurbCount ="We speak a total of 24 languages that are official/co-official to 110 countries. Hover over our office locations to find out the global reach of our team based on our language repotoire."
-var blurbNewOffice="Later this month we'll be opening up our fifth, and newest office in Berlin, Germany. This brings our team size to a total of xxx individuals."
+var blurbHeader;
+var blurbCount;
+var blurbAddress;
 
 mapboxgl.accessToken = 'pk.eyJ1IjoicmFtYXMiLCJhIjoiUFdJckNoOCJ9.LGJOlhJCLddj5fk5da6ZjQ';
 
@@ -11,10 +11,13 @@ var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/ramas/cikmcynsj00c5b5lwqzvvlk1r', //stylesheet location
     center: [27.33, 27.73], // starting position
-    minZoom: 1.8,
-    maxZoom: 1.8 // starting zoom
-    // hash: true
+    minZoom: 1.8, //set zoom level
+    maxZoom: 1.8 
+    
 });
+
+
+//diable paning and other interactions
 
 map.dragRotate.disable();
 map.touchZoomRotate.disable();
@@ -48,7 +51,7 @@ map.on('style.load', function () {
 			'fill-opacity': '.0',
 			'fill-outline-color': '#ffffff'
         }
-    },'country-label-lg');
+    },'country-label-lg'); //place country labels above the countries layer
 
     //add office points
 
@@ -92,7 +95,7 @@ map.on('style.load', function () {
 
 
 map.on('mousemove', function (e) {
-    console.log();
+    
 
     var countryFilter = []; //matching countries
 
@@ -106,10 +109,10 @@ map.on('mousemove', function (e) {
                 if (features[0].properties.language) { // if there is a language attribute for each office
                     // Loop through the language list of each office
                     for (var i = 0; i <  features[0].properties.language.length; i++) {
-                        // console.log("Verifying matches for "+features[0].properties.language[i]+"...");
+                        
                         //loop through country list
                         for (var j = 0; j < countryLanguageJSON.features.length; j++) {
-                            // console.log("Entering through the country list...");
+                           
                             var countryLanguages =[]; //variable for languages of a country
                             if (countryLanguageJSON.features[j].properties.LANGUAGE) { //if language is not null
                                 
@@ -119,14 +122,15 @@ map.on('mousemove', function (e) {
                             }
 
                             if (countryLanguages) {
-                                // console.log("List of languages for "+countryLanguageJSON.features[j].properties.NAME + " "+countryLanguages);
+                               
 
                                  //for each language in the country list iterate
                                 for (var k = 0; k < countryLanguages.length; k++) {
-                                    // console.log("Testing whether "+ countryLanguages[k] + " is a match for " +features[0].properties.language[i] );
+                                    
 
                                     if (features[0].properties.language[i] === countryLanguages[k].trim()) {
-                                        // console.log("Yes, found a match!");
+                                        //push the country name ot the filter list only if it is already not present in the list
+                                        
                                         if(countryFilter.indexOf(countryLanguageJSON.features[j].properties.ISO3) < 0 )
                                         {
 
@@ -146,35 +150,32 @@ map.on('mousemove', function (e) {
                 
                 var filter = ['in', 'ISO3'].concat(countryFilter); //construct the filter here
                 map.setFilter('countriesLayer', filter); //set the filter for the countries
-                map.setPaintProperty('countriesLayer','fill-color','#f2e190');
-                map.setPaintProperty('countriesLayer','fill-opacity','1');
-                map.setPaintProperty('countriesLayer','fill-outline-color','#fefaff');
+                onHover();
+               
                 
 
             
         
                
             }
-                var hideDiv = document.getElementById("info1");
-                var div= document.getElementById("info");
+                var generalInfoDiv = document.getElementById("generalInfo");
+                var officeInfodiv= document.getElementById("officeInfo");
                 map.getCanvas().style.cursor = (!err && features.length) ? 'pointer' : '';
                
                 if (err || !features.length) {
-                map.setPaintProperty('countriesLayer','fill-color','#ffffff');
-                map.setPaintProperty('countriesLayer','fill-opacity','0');
-                map.setPaintProperty('countriesLayer','fill-outline-color','#ffffff');
+                noHover(); //set the style to default colors
+                
            
-                hideDiv.style.display = "block";
-                div.style.display="none";
+                generalInfoDiv.style.display = "block";
+                officeInfodiv.style.display="none";
                 return;
                 }
                 else {
+                onHover(); // highlight the matching countries
 
-                div.style.display = "block";
-                blurbHeader = features[0].properties.name;
-                map.setPaintProperty('countriesLayer','fill-color','#f2e190');
-                map.setPaintProperty('countriesLayer','fill-opacity','1');
-                map.setPaintProperty('countriesLayer','fill-outline-color','#fefaff');
+                officeInfodiv.style.display = "block";
+                
+                
                 generateInfo(features[0], countryFilter);
                 
              }
@@ -185,28 +186,44 @@ map.on('mousemove', function (e) {
 });
 
 
-function generateInfo(office, countryMatch)
+function onHover() // highlights the matching countries when there is a mouse over on any of the office
+{
+    map.setPaintProperty('countriesLayer','fill-color','#f2e190');
+    map.setPaintProperty('countriesLayer','fill-opacity','1');
+    map.setPaintProperty('countriesLayer','fill-outline-color','#fefaff');
+}
 
- {
-      var hideDiv = document.getElementById("info1");
-      info1.style.display ="none";
-      var div = document.getElementById("info");
-      div.innerHTML="";
-      var infoheading = document.createElement('h1');
-      infoheading.innerHTML = blurbHeader;
-      div.appendChild(infoheading);
-      var firstParagraph = document.createElement('p');
-      firstParagraph.innerHTML= office.properties.housenumber+" "+ 
-                                office.properties.street+"</br>"+
-                                office.properties.area+"</br>"+
-                                office.properties.city+"</br>"+
-                                office.properties.country;
-      div.appendChild(firstParagraph);
-      var secondParagraph = document.createElement('p');
-      secondParagraph.innerHTML="At our "+ office.properties.name +
-                                 " office, we speak  " +office.properties.language.length+
-                                 " language(s) that are official to "+ countryMatch.length+" countries.";
-      div.appendChild(secondParagraph);
+function noHover() //set the map style to defaults if there is no mouse over on any of the office
+{
+   map.setPaintProperty('countriesLayer','fill-color','#ffffff');
+   map.setPaintProperty('countriesLayer','fill-opacity','0');
+   map.setPaintProperty('countriesLayer','fill-outline-color','#ffffff');
+}
+
+function generateInfo(office, countryMatch) //generates information for the office on the fly
+
+{
+      var generalInfoDiv = document.getElementById("generalInfo");
+      generalInfoDiv.style.display ="none";
+      var officeInfoDiv = document.getElementById("officeInfo");
+      officeInfoDiv.innerHTML="";
+      var infoHeading = document.createElement('h1');
+      blurbHeader = office.properties.name;
+      infoHeading.innerHTML = blurbHeader;
+      officeInfoDiv.appendChild(infoHeading);
+      var addressText = document.createElement('p');
+      blurbAddress =office.properties.housenumber+" "+ office.properties.street+"</br>"+
+                    office.properties.area+"</br>"+
+                    office.properties.city+"</br>"+
+                    office.properties.country;
+      addressText.innerHTML= blurbAddress;
+      officeInfoDiv.appendChild(addressText);
+      var countText = document.createElement('p');
+      blurbCount ="At our "+ office.properties.name +
+                   " office, we speak  " +office.properties.language.length+
+                  " language(s) that are official to "+ countryMatch.length+" countries.";
+      countText.innerHTML=blurbCount;
+      officeInfoDiv.appendChild(countText);
       
       
  }
