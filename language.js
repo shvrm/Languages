@@ -1,7 +1,8 @@
 'use strict';
 var countryLanguageJSON = require('./countryLanguages.json');
 var offices = require('./mbxLanguages.json');
-var blurbCount ="Last week we did a quick poll of all the languages spoken by our team across offices. In total we speak 24 languages that are official/co-official to 110 countries. Hover over our office locations to find out the global reach of our team based on our language repotoire."
+var blurbHeader = "Placeholder";
+var blurbCount ="We speak a total of 24 languages that are official/co-official to 110 countries. Hover over our office locations to find out the global reach of our team based on our language repotoire."
 var blurbNewOffice="Later this month we'll be opening up our fifth, and newest office in Berlin, Germany. This brings our team size to a total of xxx individuals."
 
 mapboxgl.accessToken = 'pk.eyJ1IjoicmFtYXMiLCJhIjoiUFdJckNoOCJ9.LGJOlhJCLddj5fk5da6ZjQ';
@@ -9,10 +10,15 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicmFtYXMiLCJhIjoiUFdJckNoOCJ9.LGJOlhJCLddj5fk5
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/ramas/cikmcynsj00c5b5lwqzvvlk1r', //stylesheet location
-    // center: [77.6, 12.98], // starting position
-    zoom: 1.5 // starting zoom
+    center: [27.33, 27.73], // starting position
+    zoom: 1.8 // starting zoom
     // hash: true
 });
+
+map.dragRotate.disable();
+map.touchZoomRotate.disable();
+map.touchZoomRotate.disableRotation();
+
 
 
 var countries = new mapboxgl.GeoJSONSource({
@@ -42,7 +48,7 @@ map.on('style.load', function () {
 			'fill-opacity': '.0',
 			'fill-outline-color': '#ffffff'
         }
-    });
+    },'country-label-lg');
 
     //add office points
 
@@ -86,6 +92,8 @@ map.on('style.load', function () {
 
 
 map.on('mousemove', function (e) {
+    console.log();
+
     var countryFilter = []; //matching countries
 
     map.featuresAt(e.point, {
@@ -142,41 +150,62 @@ map.on('mousemove', function (e) {
                 map.setPaintProperty('countriesLayer','fill-opacity','1');
                 map.setPaintProperty('countriesLayer','fill-outline-color','#fefaff');
                 
-                var div = document.getElementById("info");
-                 map.getCanvas().style.cursor = (!err && features.length) ? 'pointer' : '';
-               if (err || !features.length) {
-           
-           
-               div.style.display = "none";
-              }
-            else {
 
-             div.style.display = "block";
-             generateInfo(features[0], countryFilter);
-             }
             
         
                
             }
+                var hideDiv = document.getElementById("info1");
+                var div= document.getElementById("info");
+                map.getCanvas().style.cursor = (!err && features.length) ? 'pointer' : '';
+               
+                if (err || !features.length) {
+                map.setPaintProperty('countriesLayer','fill-color','#ffffff');
+                map.setPaintProperty('countriesLayer','fill-opacity','0');
+                map.setPaintProperty('countriesLayer','fill-outline-color','#ffffff');
+           
+                hideDiv.style.display = "block";
+                div.style.display="none";
+                return;
+                }
+                else {
 
+                div.style.display = "block";
+                blurbHeader = features[0].properties.name;
+                map.setPaintProperty('countriesLayer','fill-color','#f2e190');
+                map.setPaintProperty('countriesLayer','fill-opacity','1');
+                map.setPaintProperty('countriesLayer','fill-outline-color','#fefaff');
+                generateInfo(features[0], countryFilter);
+                
+             }
 
         });
+
 
 });
 
 
 function generateInfo(office, countryMatch)
+
  {
+      var hideDiv = document.getElementById("info1");
+      info1.style.display ="none";
       var div = document.getElementById("info");
       div.innerHTML="";
       var infoheading = document.createElement('h1');
-      infoheading.innerHTML = office.properties.name;
+      infoheading.innerHTML = blurbHeader;
       div.appendChild(infoheading);
       var firstParagraph = document.createElement('p');
-      firstParagraph.innerHTML=blurbCount+" "+office.properties.name+" reaches a total of "+ countryMatch.length+" countries";
+      firstParagraph.innerHTML= office.properties.housenumber+" "+ 
+                                office.properties.street+"</br>"+
+                                office.properties.area+"</br>"+
+                                office.properties.city+"</br>"+
+                                office.properties.country;
       div.appendChild(firstParagraph);
       var secondParagraph = document.createElement('p');
-      secondParagraph.innerHTML=blurbNewOffice;
+      secondParagraph.innerHTML="At our "+ office.properties.name +
+                                 " office, we speak  " +office.properties.language.length+
+                                 " language(s) that are official to "+ countryMatch.length+" countries.";
       div.appendChild(secondParagraph);
       
       
